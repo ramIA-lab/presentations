@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see https://quarto.org/docs/presentations/."
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html#quarto",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html#quarto",
+    "title": "Untitled",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see https://quarto.org/docs/presentations/."
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html#bullets",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html#bullets",
+    "title": "Untitled",
+    "section": "Bullets",
+    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html#code",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratoriv2.html#code",
+    "title": "Untitled",
+    "section": "Code",
+    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#informació-del-curs",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#informació-del-curs",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Informació del curs",
+    "text": "Informació del curs\nProfessors\n\n\nTeoria\n\nDante Conti (dante.conti@upc.edu)\n\nIDEAI (Nexus II)\nC5 - 219\n\n\n\n\n\n\n\n\nLaboratoris\n\nGrup 1\n\nJemie Arjona (jemie.arjona@upc.edu)\n\nIDEAI (Nexus II)\n\n\nGrup 2\n\nSergi Ramirez (sergi.ramirez@upc.edu)\n\nIDEAI (Nexus II)\nC5 - 212b\n\nXavier Angerri (xavier.angerri@upc.edu)\n\nIDEAI (Nexus II)"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#informació-del-curs-1",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#informació-del-curs-1",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Informació del curs",
+    "text": "Informació del curs\nEstructura\n- Sessions Teòriques:\n\nDimarts (17:00h a 19:00h) S02 (D.Conti) \n\n- Sessions Pràctiques:\n\nAquestes sessions estaràn compostes per 1h de workshop per part del docent i 1h de treball en grup dedicat als seus projectes\n\n\nDijous (15:00h a 17:00h) PC2 (J.Arjona)\nDijous (17:00h a 19:00h) PC2 (X.Angerri i S.Ramirez) \n\n- Assistència dels estudiants:\n\nL’assistència és obligatoria tant a teoria com a la pràctica\nQualsevol falta s’haurà de justificar mitjançant el correu del professors"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Avaluació",
+    "text": "Avaluació\n\n\\[\nNota Final = 0.35 · Q + 0.325 · E_3 + 0.325 · E_4\n\\]\n\n\n\n\nÓn:\n\n\n\\(Q\\): 3 Quizes de preguntes curtes.\n\\(E_{3, 4}\\): Entrega del treball en grup\n\n\n\n\n\n\nLes matrícules d’honor s’assignarán segons els criteri dels docents valorant les aportacions dels alumnes en les classes tant teòriques com pràctiques."
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació-1",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació-1",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Avaluació",
+    "text": "Avaluació\nQuizes\n\n\n\nQuizes de preguntes curtes\nDuració: 20 minuts\nPreguntes: 10 - 15 preguntes Sense apunts\nPonderació: 11.67% (cada quiz) de la qualificació final.\n\n\n\n\n\n\n\n\n\nQuiz 1\nQuiz 2\nQuiz 3\n\n\n\n\n20/03/2025\n24/04/2025\n15/05/2025\n\n\n\n\nAquesta distribució temporal está subjectes a canvis per part dels docents"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#evaluació",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#evaluació",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Evaluació",
+    "text": "Evaluació\nProjectes\n\nEs formaran grups de 9 persones\nS’ha de mantenir la paritat de gènere en el grup.\nÉs obligatori que cada grup contingui alumnes del doble grau o ERASMUS.\nEs realitzarán dues presentacions en públic respecte les entregues 3 i 4.\nLes presentacions són en horari de classe de pràctiques.\n\n\n\n\n\n\n\n\n\n\n\n\n\nE1\nE2\nE3\nE4\n\n\n\n\nEntregues\n20/02/2025\n06/03/2025\n26/03/2025 a les 23:59\n21/05/2025 a les 23:59\n\n\nPresentacions\n\n\n27/03/2025\n22/05/2025\n\n\n\n\nImportant: No es permetrà cap entrega fora de plaç sense raons justificades"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació-2",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació-2",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Avaluació",
+    "text": "Avaluació\nProjectes\n\nEs formaran grups de 9 persones\nS’ha de mantenir la paritat de gènere en el grup.\nÉs obligatori que cada grup contingui alumnes del doble grau o ERASMUS.\nEs realitzarán dues presentacions en públic respecte les entregues 3 i 4.\nLes presentacions són en horari de classe de pràctiques.\n\n\n\n\n\n\n\n\n\n\n\n\n\nE1\nE2\nE3\nE4\n\n\n\n\nEntregues\n20/02/2025\n06/03/2025\n26/03/2025 a les 23:59\n21/05/2025 a les 23:59\n\n\nPresentacions\n\n\n27/03/2025\n22/05/2025\n\n\n\n\nImportant: No es permetrà cap entrega fora de plaç sense raons justificades"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#temari",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#temari",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Temari",
+    "text": "Temari\n\n\n\nQuizes\n\n\nQuiz 1:\n\nPreprocessing\n\nOutliers\nMètodes d’imputació\n\nClustering\nProfiling\n\nQuiz 2:\n\nAnàlisis de Correspondències\n\nQuiz 3:\n\nAnàlisis Discriminant\nAnàlisis Textual\n\n\n\n\nEntregables\n\n\nEntregable 3:\n\nPreprocessing\n\nOutliers\nMètodes d’imputació\n\nClustering\nProfiling\n\nEntregable 4:\n\nAnàlisis de Correspondències\nAnàlisis Discriminant\nAnàlisis Textual\n\n\n\nVisualitzar el document del campus on explica les pautes del treball"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#python-1",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#python-1",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Python",
+    "text": "Python\nInstalació\n\n\nNo haureu d’instal·lar cap programa\n\n\n\n\nNecessitareu una compte de gmail\n\n\n\n\n\n\n\nhttps://colab.research.google.com/"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#distribució-dels-equips",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#distribució-dels-equips",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Distribució dels equips",
+    "text": "Distribució dels equips\n\nEs formaran grups de 9 persones\nS’ha de mantenir la paritat de gènere en el grup.\nÉs obligatori que cada grup contingui alumnes del doble grau o ERASMUS.\nSerà necessari assignar a un project leader"
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#project-leader",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#project-leader",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Project Leader",
+    "text": "Project Leader\n\nFuncions:\n\n\n📌 Planificació del Projecte – Defineix objectius, abast, cronograma i recursos necessaris.\n\n\n📌 Gestió d’Equip – Coordina, motiva i resol conflictes dins de l’equip.\n\n\n📌 Comunicació – Actua com a enllaç entre stakeholders, equip i direcció.\n\n\n📌 Supervisió del Progrés – Fa seguiment de fites, terminis i qualitat del treball.\n\n\n📌 Gestió de Riscos – Identifica i mitiga riscos per a evitar retards o problemes.\n\n\n📌 Optimització de Recursos – Administra temps, pressupost i materials de manera eficient.\n\n\n📌 Resolució de Problemes – Presa decisions ràpides i efectives davant imprevistos.\n\n\n📌 Control de Qualitat – Assegura que els lliurables compleixen amb els estàndards requerits.\n\n\n📌 Reporti i Documentació – Genera informes d’avanç i manté registres actualitzats.\n\n\n📌 Implementació de Metodologies – Aplica frameworks com Agile, Scrum o PMI segons el projecte."
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#presentacions",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#presentacions",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Presentacions",
+    "text": "Presentacions\n\n Durada de 15 minuts\n\n\n El tribunal estarà compost per 3 membres docents de l’assignatura\n\n\n Tots els integrants de cada apartat s’hauràn de preparar la presentació\n\n\n El tribunal, al inici de cada presentació anunciarà les persones encarregades de presentar cada apartat.\n\n\n Al finalitzar la presentació hi haurà 15 minuts de preguntes-debat per part del tribunal."
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#evaluació-de-les-presentacions",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#evaluació-de-les-presentacions",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Evaluació de les presentacions",
+    "text": "Evaluació de les presentacions\n\n\\[\nD_{3,4} = 0.8 · NG + 0.1 · NP + 0.1 · NA\n\\]\n\n\nÓn:\n\n\n\\(NG\\): Nota global del treball\n\\(NP\\): Nota del treball de classe (laboratoris) otorgat per l’equip docent\n\\(NA\\): Nota de la cross-validació dels companys del projecte\n\n\n\nCross-validació\nEls companys del grup s’hauràn d’evaluar a si mateix i a la resta de companys i d’allà s’obtindrà una nota de l’aportació de l’alumne al treball."
+  },
+  {
+    "objectID": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació-3",
+    "href": "Introducciones/AMD/2425AMD_Presentacio_laboratori.html#avaluació-3",
+    "title": "Anàlisi Multivariant de dades (AMD)",
+    "section": "Avaluació",
+    "text": "Avaluació\nExàmen Final\n\nNomés estarà disponible per aquells alumnes que ho sol·licitin per correu electrònic\nS’evaluarà el dia 16/06/2025 a les 15:00\nS’evaluarà tota la materia (no serà excluient)\nNo es permetrà l’utilització d’apunts\nContindrà tant preguntes teòriques com preguntes de la part pràctica amb sortides que s’hauràn d’interpretar\nSerà necessari demanar a partir del dia 01/06/2025 les dades necessaries per a la realització de la part pràctica."
+  }
+]
