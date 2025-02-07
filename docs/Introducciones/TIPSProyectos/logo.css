@@ -1,0 +1,29 @@
+.reveal .slide-logo {
+    height: 100px !important;
+    width: 100px !important;
+    max-width: unset !important;
+    max-height: unset !important;
+  }
+
+.reveal .slides {
+    font-size: 60%; /* Reduce el tamaño del texto al 80% */
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* Cambiar el tamaño del código en Reveal.js */
+.reveal pre code {
+  font-size: 1.5em !important;  /* Aumenta el tamaño del código */
+  line-height: 1.3;             /* Mejora la separación entre líneas */
+  white-space: pre-wrap;        /* Ajusta el código dentro de la diapositiva */
+}
+
+/*
+img {
+    width: 600px !important;
+    height: 500px !important;
+}
+*/

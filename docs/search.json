@@ -89,5 +89,75 @@
     "title": "Anàlisi Multivariant de dades (AMD)",
     "section": "Evaluació de les presentacions",
     "text": "Evaluació de les presentacions\n\n\\[\nD_{3,4} = 0.8 · NG + 0.1 · NP + 0.1 · NA\n\\]\n\n\nÓn:\n\n\n\\(NG\\): Nota global del treball\n\\(NP\\): Nota del treball de classe (laboratoris) otorgat per l’equip docent\n\\(NA\\): Nota de la cross-validació dels companys del projecte\n\n\n\nCross-validació\nEls companys del grup s’hauràn d’evaluar a si mateix i a la resta de companys i d’allà s’obtindrà una nota de l’aportació de l’alumne al treball."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#competencias-transversales-a-evaluar-en-trabajos-prácticos",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#competencias-transversales-a-evaluar-en-trabajos-prácticos",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Competencias transversales a evaluar en trabajos prácticos",
+    "text": "Competencias transversales a evaluar en trabajos prácticos\n\nOrganización del equipo de trabajo.\nPlanificación y gestión de incidencias.\nRazonamiento\nSíntesis y claridad en el informe escrito.\nHabilidades comunicativas (presentación oral)\nIntegración de conocimientos (análisis comparativo y conclusiones de trabajos prácticos)"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#hacer-un-plan-de-trabajo",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#hacer-un-plan-de-trabajo",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Hacer un plan de trabajo",
+    "text": "Hacer un plan de trabajo\n\nIdentificar las tareas principales (incluir informes, etc.)\nDiseñar el gráfico de precedencia entre tareas.\nProgramación temporal (considere cuidadosamente las precedencias entre las tareas)\nAsignar recursos humanos a las tareas (quién hace qué y cuándo) (Asegurar la viabilidad, es decir, todos con un esfuerzo equilibrado asignado y sin selecciones de dedicación que puedan colapsar el equipo)"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#diagrama-de-gantt",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#diagrama-de-gantt",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Diagrama de Gantt",
+    "text": "Diagrama de Gantt\n\npp &lt;- ganttrify(crono,\n          by_date = T,\n          size_text_relative = 1, \n          mark_quarters = TRUE,\n          exact_date = T,\n          colour_palette = c(\"orange2\",\"blue\", \"red\"),\n          month_number = F)"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#cuadrícula-de-asignación",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#cuadrícula-de-asignación",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Cuadrícula de asignación",
+    "text": "Cuadrícula de asignación\n\n\n\n\n\nParticipantes\nMiembro 1\nMiembro 2\nMiembro 3\nMiembro 4\nMiembro 5\nMiembro 6\n\n\n\n\nTarea 1\nx\nx\nX\n\n\n\n\n\nTarea 2\n\nx\nx\n\n\n\n\n\nTarea 3\n\n\nx\nX\n\n\n\n\nTarea 4\n\n\nx\nx\n\nX\n\n\nCoordinador\nX\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMisma lista de tareas que Gantt.\nMarcar quién participa en cada uno.\nEn negrita la coordinación de tareas.\nCada coordinador de tareas es responsable del buen desarrollo de la tarea y se sincroniza con los coordinadores de otras tareas."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#plan-de-riesgos",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#plan-de-riesgos",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Plan de Riesgos",
+    "text": "Plan de Riesgos\n\n\n\n\n\n\nEnumerar los posibles problemas que pueden aparecer a lo largo del trabajo y pueden hacer que el trabajo final fracase\nPlanificar acciones para prevenir estas situaciones.\nIndique cómo gestionaría la situación si finalmente se presentara."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#habilidades",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#habilidades",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Habilidades",
+    "text": "Habilidades\n\n\n\n\n\n\n\n\n\n\n\n\nDe la Cruz et al, Ministerio de educación y deporte\n\n\nLa única forma de comunicar con claridad es haciendo coincidir los mensajes verbales y no verbales"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#habilidades-1",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#habilidades-1",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Habilidades",
+    "text": "Habilidades"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#hacer-un-plan-de-trabajo-1",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#hacer-un-plan-de-trabajo-1",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Hacer un plan de trabajo",
+    "text": "Hacer un plan de trabajo\n\nMerecerse un margen de tiempo antes de la entrega para incidencias inesperadas.\nPlanea terminar ANTES\nMerecerse tiempo para preparar presentaciones orales también.\nFormato del plan de trabajo: – Diagrama Gant + Cuadrícula de asignación + Plan de riesgos"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#diagrama-de-gantt-output",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#diagrama-de-gantt-output",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Diagrama de Gantt",
+    "text": "Diagrama de Gantt"
+  },
+  {
+    "objectID": "index.html#asignaturas",
+    "href": "index.html#asignaturas",
+    "title": "Presentacions de cursos",
+    "section": "Asignaturas",
+    "text": "Asignaturas\n\nAMD"
   }
 ]
