@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.37">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.33">
 
   <meta name="author" content="Dra. Karina Gibert">
   <title>Presentacions – Tips para el proyecto/trabajo práctico</title>
@@ -94,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-191ddbbc25beeb27917483f50a4b59ba.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e0dae81e06e4f9e500a41fac832b16c0.css">
   <link rel="stylesheet" href="logo.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -190,9 +190,7 @@
     }
   </style>
   <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
-
   <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -383,9 +381,136 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <p><img data-src="imagenes/resumen2.png" class="quarto-figure quarto-figure-center" width="1000" height="600"></p>
 </figure>
 </div>
-
+</section>
+<section class="slide level2">
 
 </section>
+<section>
+<section id="proyectos-y-rutas-de-archivos" class="title-slide slide level1 center">
+<h1>Proyectos y rutas de archivos</h1>
+
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="problema-cada-componente-del-grupo-tiene-en-una-ruta-diferente-su-base-de-datos" class="title-slide slide level1 center">
+<h1>Problema: Cada componente del grupo tiene en una ruta diferente su base de datos</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/username/OneDrive/R code/LOS.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>O tal vez …</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">setwd</span>(<span class="st">"C:/Users/username/OneDrive/R code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment"><p>Una forma fácil de hacer esto es usando un proyecto R</p>
+<ul>
+<li class="fragment"><p>Utilice un nuevo proyecto R para cada proyecto de análisis</p></li>
+<li class="fragment"><p>Haga doble clic en el archivo del proyecto para abrir RStudio con sus archivos en el lugar correcto.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="proyectos-r" class="slide level2">
+<h2>Proyectos R</h2>
+<p>Los proyectos R son un tipo especial de archivo con un . Extensión Rproj que te facilita mantener todos los datos, código e imágenes de un proyecto en un solo lugar.</p>
+<p>Abra RStudio, luego haga clic en <strong>Archivo</strong> -&gt; <strong>Nuevo proyecto</strong> -&gt; <strong>Nuevo directorio</strong> - <strong>Nuevo proyecto</strong>.</p>
+<ul>
+<li class="fragment"><p>Escriba el nombre que desea darle a su nueva carpeta. Luego, use Explorar para seleccionar en qué lugar de su computadora desea crear la carpeta.</p></li>
+<li class="fragment"><p>Finalmente, clicamos <code>Crear proyecto</code>. La nueva carpeta se creará y abrirá en RStudio, a veces puede tardar un par de minutos.</p></li>
+</ul>
+</section>
+<section id="carpetas-de-proyectos" class="slide level2">
+<h2>Carpetas de proyectos</h2>
+<div title="Usar proyectos de R">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Usar proyectos de R</strong></p>
+</div>
+<div class="callout-content">
+<p>Mantenga todo lo relacionado con su análisis junto, y fácil de encontrar para R usando proyectos.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>R</span>
+<span id="cb4-2"><a></a>│   messy_example_script.R</span>
+<span id="cb4-3"><a></a>│   R scripts for other project 1.R</span>
+<span id="cb4-4"><a></a>│   R scripts for other project 2.R</span>
+<span id="cb4-5"><a></a>│   R scripts for other project 3.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>project folder</span>
+<span id="cb5-2"><a></a>│   messy_example_script.R</span>
+<span id="cb5-3"><a></a>|   data.csv</span>
+<span id="cb5-4"><a></a>|   project_name.Rproj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="organizar-un-guión" class="title-slide slide level1 center">
+<h1>Organizar un guión</h1>
+
+</section>
+<section id="añadir-comentarios" class="slide level2">
+<h2>Añadir comentarios</h2>
+<ul>
+<li class="fragment">Añadir comentarios usando la <code>#</code> en R (en lineas separadas)</li>
+</ul>
+<div title="*Mala praxis*">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong><em>Mala praxis</em></strong></p>
+</div>
+<div class="callout-content">
+<p>Los comentarios no necesitan explicar lo que hace tu código.</p>
+</div>
+</div>
+</div>
+</div>
+<div title="*Mala praxis*">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong><em>Mala praxis</em></strong></p>
+</div>
+<div class="callout-content">
+<p>Los comentarios deberían explicar <strong>POR QUÉ</strong> lo hiciste.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="secciones-y-subsecciones" class="slide level2">
+<h2>Secciones y subsecciones</h2>
+<p>Puedes añadir secciones y subsecciones al código:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a># Load data ---------------------------------------</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>## Geospatial files -------------------------------</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>## Population files -------------------------------</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="imagenes/grafico_script.png"></p>
+</div></div>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="imagenes/Logo_UPC.svg.png" class="slide-logo"></p>
@@ -605,80 +730,42 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -759,6 +846,8 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')

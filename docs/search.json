@@ -159,5 +159,40 @@
     "title": "Presentacions de cursos",
     "section": "Asignaturas",
     "text": "Asignaturas\n\nAMD"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#proyectos-r",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#proyectos-r",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Proyectos R",
+    "text": "Proyectos R\nLos proyectos R son un tipo especial de archivo con un . Extensión Rproj que te facilita mantener todos los datos, código e imágenes de un proyecto en un solo lugar.\nAbra RStudio, luego haga clic en Archivo -&gt; Nuevo proyecto -&gt; Nuevo directorio - Nuevo proyecto.\n\nEscriba el nombre que desea darle a su nueva carpeta. Luego, use Explorar para seleccionar en qué lugar de su computadora desea crear la carpeta.\nFinalmente, clicamos Crear proyecto. La nueva carpeta se creará y abrirá en RStudio, a veces puede tardar un par de minutos."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#carpetas-de-proyectos",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#carpetas-de-proyectos",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Carpetas de proyectos",
+    "text": "Carpetas de proyectos\n\n\n\n\n\n\n\nUsar proyectos de R\n\n\nMantenga todo lo relacionado con su análisis junto, y fácil de encontrar para R usando proyectos.\n\n\n\n\n\n\nR\n│   messy_example_script.R\n│   R scripts for other project 1.R\n│   R scripts for other project 2.R\n│   R scripts for other project 3.R\n\nproject folder\n│   messy_example_script.R\n|   data.csv\n|   project_name.Rproj"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#carpetas-de-proyectos-1",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#carpetas-de-proyectos-1",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Carpetas de proyectos",
+    "text": "Carpetas de proyectos"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#añadir-comentarios",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#añadir-comentarios",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Añadir comentarios",
+    "text": "Añadir comentarios\n\nAñadir comentarios usando la # en R (en lineas separadas)\n\n\n\n\n\n\n\n\nMala praxis\n\n\nLos comentarios no necesitan explicar lo que hace tu código.\n\n\n\n\n\n\n\n\n\n\n\nMala praxis\n\n\nLos comentarios deberían explicar POR QUÉ lo hiciste."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#secciones-y-subsecciones",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#secciones-y-subsecciones",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Secciones y subsecciones",
+    "text": "Secciones y subsecciones\nPuedes añadir secciones y subsecciones al código:\n\n\n# Load data ---------------------------------------\n\n## Geospatial files -------------------------------\n\n## Population files -------------------------------"
   }
 ]

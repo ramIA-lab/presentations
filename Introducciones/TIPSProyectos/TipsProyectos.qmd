@@ -218,11 +218,11 @@ La única forma de comunicar con claridad es haciendo coincidir los mensajes ver
 
 ------------------------------------------------------------------------
 
-# Proyectos y rutas de archivos 
+# Proyectos y rutas de archivos
 
 ------------------------------------------------------------------------
 
-# Problema: Cada componente del grupo tiene en una ruta diferente su base de datos 
+# Problema: Cada componente del grupo tiene en una ruta diferente su base de datos
 
 ```{r}
 #| echo: true
@@ -240,9 +240,92 @@ O tal vez ...
 setwd("C:/Users/username/OneDrive/R code")
 ```
 
-* Una forma fácil de hacer esto es usando un proyecto R
-    
-    - Utilice un nuevo proyecto R para cada proyecto de análisis
-    
-    - Haga doble clic en el archivo del proyecto para abrir RStudio con sus archivos en el lugar correcto.
+-   Una forma fácil de hacer esto es usando un proyecto R
 
+    -   Utilice un nuevo proyecto R para cada proyecto de análisis
+
+    -   Haga doble clic en el archivo del proyecto para abrir RStudio con sus archivos en el lugar correcto.
+
+------------------------------------------------------------------------
+
+## Proyectos R
+
+Los proyectos R son un tipo especial de archivo con un . Extensión Rproj que te facilita mantener todos los datos, código e imágenes de un proyecto en un solo lugar.
+
+Abra RStudio, luego haga clic en **Archivo** -\> **Nuevo proyecto** -\> **Nuevo directorio** - **Nuevo proyecto**.
+
+-   Escriba el nombre que desea darle a su nueva carpeta. Luego, use Explorar para seleccionar en qué lugar de su computadora desea crear la carpeta.
+
+-   Finalmente, clicamos `Crear proyecto`. La nueva carpeta se creará y abrirá en RStudio, a veces puede tardar un par de minutos.
+
+------------------------------------------------------------------------
+
+## Carpetas de proyectos
+
+::: {.callout-tip title="Usar proyectos de R"}
+Mantenga todo lo relacionado con su análisis junto, y fácil de encontrar para R usando proyectos.
+:::
+
+::::: columns
+::: {.column width="50%"}
+
+```text
+R
+│   messy_example_script.R
+│   R scripts for other project 1.R
+│   R scripts for other project 2.R
+│   R scripts for other project 3.R
+
+```
+:::
+
+::: {.column width="50%"}
+         
+```text
+project folder
+│   messy_example_script.R
+|   data.csv
+|   project_name.Rproj
+
+```
+:::
+:::::
+
+------------------------------------------------------------------------
+
+# Organizar un guión
+
+------------------------------------------------------------------------
+
+## Añadir comentarios
+
+- Añadir comentarios usando la `#` en R (en lineas separadas)
+
+::: {.callout-important title = "*Mala praxis*"}
+Los comentarios no necesitan explicar lo que hace tu código.
+:::
+
+::: {.callout-tip title = "*Buena praxis*"}
+Los comentarios deberían explicar **POR QUÉ** lo hiciste.
+:::
+
+------------------------------------------------------------------------
+
+## Secciones y subsecciones
+
+Puedes añadir secciones y subsecciones al código:
+
+::::: columns
+::: {.column width="50%"}
+```text
+# Load data ---------------------------------------
+
+## Geospatial files -------------------------------
+
+## Population files -------------------------------
+```
+:::
+::: {.column width="50%"}
+![](imagenes/grafico_script.png)
+:::
+::::: 
