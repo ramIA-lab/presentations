@@ -23,57 +23,61 @@ format:
     transitionSpeed: slow # Velocidad: 'fast', 'normal', 'slow'
 editor: visual
 ---
+
+```{=html}
 <!--
 ## Competencias transversales a evaluar en trabajos prácticos {background-color="#d8f1fc"}
 -->
+```
 
 ## Competencias transversales a evaluar en trabajos prácticos
 
-- Organización del equipo de trabajo.
+-   Organización del equipo de trabajo.
 
-- Planificación y gestión de incidencias.
+-   Planificación y gestión de incidencias.
 
-- Razonamiento
+-   Razonamiento
 
-- Síntesis y claridad en el informe escrito.
+-   Síntesis y claridad en el informe escrito.
 
-- Habilidades comunicativas (presentación oral)
+-   Habilidades comunicativas (presentación oral)
 
-- Integración de conocimientos (análisis comparativo y conclusiones de trabajos prácticos)
+-   Integración de conocimientos (análisis comparativo y conclusiones de trabajos prácticos)
 
---------------------------------------------------
-
-## Hacer un plan de trabajo
-
-- Identificar las tareas principales (incluir informes, etc.)
-
-- Diseñar el gráfico de precedencia entre tareas.
-
-- Programación temporal (considere cuidadosamente las precedencias entre las tareas) 
-
-- Asignar recursos humanos a las tareas (quién hace qué y cuándo) (Asegurar la viabilidad, es decir, todos con un esfuerzo equilibrado asignado y sin selecciones de dedicación que puedan colapsar el equipo) 
-
---------------------------------------------------
+------------------------------------------------------------------------
 
 ## Hacer un plan de trabajo
 
-- Merecerse un margen de tiempo antes de la entrega para incidencias inesperadas. 
+-   Identificar las tareas principales (incluir informes, etc.)
 
-- Planea terminar **ANTES** 
+-   Diseñar el gráfico de precedencia entre tareas.
 
-- Merecerse tiempo para preparar presentaciones orales también. 
+-   Programación temporal (considere cuidadosamente las precedencias entre las tareas)
 
-- Formato del plan de trabajo: 
-  – Diagrama Gant + Cuadrícula de asignación + Plan de riesgos
+-   Asignar recursos humanos a las tareas (quién hace qué y cuándo) (Asegurar la viabilidad, es decir, todos con un esfuerzo equilibrado asignado y sin selecciones de dedicación que puedan colapsar el equipo)
 
+------------------------------------------------------------------------
+
+## Hacer un plan de trabajo
+
+-   Merecerse un margen de tiempo antes de la entrega para incidencias inesperadas.
+
+-   Planea terminar **ANTES**
+
+-   Merecerse tiempo para preparar presentaciones orales también.
+
+-   Formato del plan de trabajo: – Diagrama Gant + Cuadrícula de asignación + Plan de riesgos
+
+```{=html}
 <!--
 ::: {.fragment .custom .blur}
 First item to be unblurred
 :::
 https://quarto.org/docs/presentations/revealjs/advanced.html
 -->
+```
 
---------------------------------------------------
+------------------------------------------------------------------------
 
 ## Diagrama de Gantt
 
@@ -113,7 +117,7 @@ pp <- ganttrify(crono,
 pp
 ```
 
---------------------------------------------------
+------------------------------------------------------------------------
 
 ## Cuadrícula de asignación
 
@@ -149,7 +153,6 @@ kable(data_formatted, format = "html", escape = FALSE, table.attr = "class='styl
   row_spec(1:nrow(data), color = "blue", background = "white")        # Todo el texto en azul, fondo blanco
 ```
 
-
 ```{r}
 #| echo: false
 #| eval: false
@@ -177,27 +180,27 @@ data_formatted %>%
 
 <br></br>
 
-- Misma lista de tareas que Gantt.
+-   Misma lista de tareas que Gantt.
 
-- Marcar quién participa en cada uno.
+-   Marcar quién participa en cada uno.
 
-- En negrita la coordinación de tareas.
+-   En negrita la coordinación de tareas.
 
-- Cada coordinador de tareas es responsable del buen desarrollo de la tarea y se sincroniza con los coordinadores de otras tareas.
+-   Cada coordinador de tareas es responsable del buen desarrollo de la tarea y se sincroniza con los coordinadores de otras tareas.
 
---------------------------------------------------
+------------------------------------------------------------------------
 
 ## Plan de Riesgos
 
 ![](imagenes/tabla.png){width="800" height="300" fig-align="center"}
 
-- Enumerar los posibles problemas que pueden aparecer a lo largo del trabajo y pueden hacer que el trabajo final fracase
+-   Enumerar los posibles problemas que pueden aparecer a lo largo del trabajo y pueden hacer que el trabajo final fracase
 
-- Planificar acciones para prevenir estas situaciones.
+-   Planificar acciones para prevenir estas situaciones.
 
-- Indique cómo gestionaría la situación si finalmente se presentara.
+-   Indique cómo gestionaría la situación si finalmente se presentara.
 
---------------------------------------------------
+------------------------------------------------------------------------
 
 ## Habilidades
 
@@ -207,10 +210,39 @@ data_formatted %>%
 La única forma de comunicar con claridad es haciendo coincidir los mensajes verbales y no verbales
 :::
 
-
---------------------------------------------------
+------------------------------------------------------------------------
 
 ## Habilidades
 
 ![](imagenes/resumen2.png){width="1000" height="600" fig-align="center"}
+
+------------------------------------------------------------------------
+
+# Proyectos y rutas de archivos 
+
+------------------------------------------------------------------------
+
+# Problema: Cada componente del grupo tiene en una ruta diferente su base de datos 
+
+```{r}
+#| echo: true
+#| eval: false
+
+data <- read_csv("C:/Users/username/OneDrive/R code/LOS.csv")
+```
+
+O tal vez ...
+
+```{r}
+#| echo: true
+#| eval: false
+
+setwd("C:/Users/username/OneDrive/R code")
+```
+
+* Una forma fácil de hacer esto es usando un proyecto R
+    
+    - Utilice un nuevo proyecto R para cada proyecto de análisis
+    
+    - Haga doble clic en el archivo del proyecto para abrir RStudio con sus archivos en el lugar correcto.
 
