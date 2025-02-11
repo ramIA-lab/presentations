@@ -285,5 +285,54 @@
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Varios archivos",
     "text": "Varios archivos\n\n\nNombres aceptables\nproject\n│   data wrangling.R\n│   load data.R\n│   modelling.R\n│   packages.R\n│   plots.R\n│   plots2.R\n\nMejores nombres\nproject\n│   00_packages.R\n│   01_load_data.R\n│   02_data_wrangling.R\n│   03_exploratory_plots.R\n│   04_modelling.R\n│   05_final_plots_tables.R\n\n\n\n\n\n\n\n\nAtajos del teclado\n\n\n\nPrefijo con números para darles un orden (añadir ceros a la izquierda)\nDar nombres sensatos y descriptivos\nEvitar los espacios (o _ o -)\n\n\nNota: En los nombres de las variables y funciones se aplican el mismo criterio"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#varias-carpetas",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#varias-carpetas",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Varias carpetas",
+    "text": "Varias carpetas\nPara una óptima organización del proyecto, la estructura de carpetas que se debería de realizar es la siguiente:\nproject\n│   project.Rproj\n│   README.md\n└───data\n│   │   data_inicial.RData\n│   │   data_preprocessada.RData\n│   │   data_modelling.RData\n└───docs\n└───inputs\n│   │   data.csv\n└───outputs\n│   └─── data_final.csv \n│   └─── plots\n│        │   residuals.png\n│        │   outcome_by_age.png\n│        │   outcome_by_occupation.png\n└───syntax\n│   │   00_packages.R\n│   │   01_load_data.R\n│   │   02_data_wrangling.R\n│   │   03_exploratory_plots.R\n│   │   04_modelling.R\n│   │   05_final_plots_tables.R\n└───temp"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#dependencias-de-los-scripts-en-r",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#dependencias-de-los-scripts-en-r",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Dependencias de los scripts en R",
+    "text": "Dependencias de los scripts en R\n\nproject\n└───syntax\n│   │   00_packages.R\n│   │   01_load_data.R\n│   │   02_data_wrangling.R\n│   │   03_exploratory_plots.R\n│   │   04_modelling.R\n│   │   05_final_plots_tables.R\n\n\nEl scripts 01 depende de 00\nEl script 02 depende de 01 (y 00)\nEl script 03 depende de 02 (y 01 y 00)\nEl script 04 depende de 03 (y 02 y 01 y 00)\n…\n\n\n\n\n\n\n\n\n\nAtajos del teclado\n\n\n¡Escribe todo esto (en un archivo README.md)!"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Otros consejos útiles",
+    "text": "Otros consejos útiles\nProblema: su coautor utiliza una versión de paquete diferente\n\n\nrenv:\n\nAislar el entorno del proyecto\nFijar versiones específicas del paquete R a cada proyecto\nHace que sea más fácil utilizar la misma versión que los colaboradores"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-1",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-1",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Otros consejos útiles",
+    "text": "Otros consejos útiles\nProblema: su coautor utiliza una versión de diferente de R\n\n\nrig:\n\nAdministrar múltiples versiones de R\nCambiar entre diferentes versiones de R para diferentes proyectos"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-2",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-2",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Otros consejos útiles",
+    "text": "Otros consejos útiles\nProblema: su coautor utiliza una versión de diferente de R\n\n\nrix:\n\nUtiliza Nix, un administrador de paquetes enfocado en compilaciones reproducibles.\nCrea entornos específicos del proyecto con una versión personalizada de R, sus paquetes y todas las dependencias del sistema"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-3",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-3",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Otros consejos útiles",
+    "text": "Otros consejos útiles\nProblema: Necesito ayuda con el código\n\n\nEl paquete {reprex} en R facilita la creación de un ejemplo reproducible. Puedes incluir la información de la sesión como por ejemplo versiones del paquete."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-4",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#otros-consejos-útiles-4",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Otros consejos útiles",
+    "text": "Otros consejos útiles\nProblema: Necesito compartir el código con mis compañeros"
   }
 ]

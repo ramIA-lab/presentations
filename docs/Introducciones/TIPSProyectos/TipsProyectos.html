@@ -684,6 +684,158 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 </div>
 </div>
 </div>
+</section>
+<section id="varias-carpetas" class="slide level2">
+<h2>Varias carpetas</h2>
+<p>Para una óptima organización del proyecto, la estructura de carpetas que se debería de realizar es la siguiente:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>project</span>
+<span id="cb12-2"><a></a>│   project.Rproj</span>
+<span id="cb12-3"><a></a>│   README.md</span>
+<span id="cb12-4"><a></a>└───data</span>
+<span id="cb12-5"><a></a>│   │   data_inicial.RData</span>
+<span id="cb12-6"><a></a>│   │   data_preprocessada.RData</span>
+<span id="cb12-7"><a></a>│   │   data_modelling.RData</span>
+<span id="cb12-8"><a></a>└───docs</span>
+<span id="cb12-9"><a></a>└───inputs</span>
+<span id="cb12-10"><a></a>│   │   data.csv</span>
+<span id="cb12-11"><a></a>└───outputs</span>
+<span id="cb12-12"><a></a>│   └─── data_final.csv </span>
+<span id="cb12-13"><a></a>│   └─── plots</span>
+<span id="cb12-14"><a></a>│        │   residuals.png</span>
+<span id="cb12-15"><a></a>│        │   outcome_by_age.png</span>
+<span id="cb12-16"><a></a>│        │   outcome_by_occupation.png</span>
+<span id="cb12-17"><a></a>└───syntax</span>
+<span id="cb12-18"><a></a>│   │   00_packages.R</span>
+<span id="cb12-19"><a></a>│   │   01_load_data.R</span>
+<span id="cb12-20"><a></a>│   │   02_data_wrangling.R</span>
+<span id="cb12-21"><a></a>│   │   03_exploratory_plots.R</span>
+<span id="cb12-22"><a></a>│   │   04_modelling.R</span>
+<span id="cb12-23"><a></a>│   │   05_final_plots_tables.R</span>
+<span id="cb12-24"><a></a>└───temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dependencias-de-los-scripts-en-r" class="slide level2">
+<h2>Dependencias de los scripts en R</h2>
+<div class="fragment">
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>project</span>
+<span id="cb13-2"><a></a>└───syntax</span>
+<span id="cb13-3"><a></a>│   │   00_packages.R</span>
+<span id="cb13-4"><a></a>│   │   01_load_data.R</span>
+<span id="cb13-5"><a></a>│   │   02_data_wrangling.R</span>
+<span id="cb13-6"><a></a>│   │   03_exploratory_plots.R</span>
+<span id="cb13-7"><a></a>│   │   04_modelling.R</span>
+<span id="cb13-8"><a></a>│   │   05_final_plots_tables.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li class="fragment">El scripts 01 depende de 00</li>
+<li class="fragment">El script 02 depende de 01 (y 00)</li>
+<li class="fragment">El script 03 depende de 02 (y 01 y 00)</li>
+<li class="fragment">El script 04 depende de 03 (y 02 y 01 y 00)</li>
+<li class="fragment">…</li>
+</ul>
+<div class="fragment">
+<div title="Atajos del teclado">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Atajos del teclado</strong></p>
+</div>
+<div class="callout-content">
+<p>¡Escribe todo esto (en un archivo README.md)!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="otros-consejos-útiles" class="slide level2">
+<h2>Otros consejos útiles</h2>
+<h3 id="problema-su-coautor-utiliza-una-versión-de-paquete-diferente">Problema: su coautor utiliza una versión de paquete diferente</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://rstudio.github.io/renv/articles/renv.html"><strong>renv:</strong></a></p>
+<ul>
+<li class="fragment">Aislar el entorno del proyecto</li>
+<li class="fragment">Fijar versiones específicas del paquete R a cada proyecto</li>
+<li class="fragment">Hace que sea más fácil utilizar la misma versión que los colaboradores</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://rstudio.github.io/renv/logo.svg" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="otros-consejos-útiles-1" class="slide level2">
+<h2>Otros consejos útiles</h2>
+<h3 id="problema-su-coautor-utiliza-una-versión-de-diferente-de-r">Problema: su coautor utiliza una versión de diferente de R</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://github.com/r-lib/rig"><strong>rig:</strong></a></p>
+<ul>
+<li class="fragment">Administrar múltiples versiones de R</li>
+<li class="fragment">Cambiar entre diferentes versiones de R para diferentes proyectos</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/800px-R_logo.svg.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="otros-consejos-útiles-2" class="slide level2">
+<h2>Otros consejos útiles</h2>
+<h3 id="problema-su-coautor-utiliza-una-versión-de-diferente-de-r-1">Problema: su coautor utiliza una versión de diferente de R</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://github.com/ropensci/rix"><strong>rix:</strong></a></p>
+<ul>
+<li class="fragment"><p>Utiliza Nix, un administrador de paquetes enfocado en compilaciones reproducibles.</p></li>
+<li class="fragment"><p>Crea entornos específicos del proyecto con una versión personalizada de R, sus paquetes y todas las dependencias del sistema</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imagenes/rix.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="otros-consejos-útiles-3" class="slide level2">
+<h2>Otros consejos útiles</h2>
+<h3 id="problema-necesito-ayuda-con-el-código">Problema: Necesito ayuda con el código</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>El paquete <code>{reprex}</code> en R facilita la creación de un ejemplo reproducible. Puedes incluir la información de la sesión como por ejemplo versiones del paquete.</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://aosmith16.github.io/spring-r-topics/slides/figs/reprex.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="otros-consejos-útiles-4" class="slide level2">
+<h2>Otros consejos útiles</h2>
+<h3 id="problema-necesito-compartir-el-código-con-mis-compañeros">Problema: Necesito compartir el código con mis compañeros</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://cdn.prod.website-files.com/5f5a53e153805db840dae2db/64e79ca5aff2fb7295bfddf9_github-que-es.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://miro.medium.com/v2/resize:fit:600/1*p6exlg2Jrl3pimjPy7R-sA.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div></div>
 
 
 </section></section>

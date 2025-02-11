@@ -533,3 +533,160 @@ Nota: En los nombres de las variables y funciones se aplican el mismo criterio
 :::
 
 
+-------------------------------------------------
+
+## Varias carpetas 
+
+Para una óptima organización del proyecto, la estructura de carpetas que se debería de realizar es la siguiente: 
+
+```text
+project
+│   project.Rproj
+│   README.md
+└───data
+│   │   data_inicial.RData
+│   │   data_preprocessada.RData
+│   │   data_modelling.RData
+└───docs
+└───inputs
+│   │   data.csv
+└───outputs
+│   └─── data_final.csv 
+│   └─── plots
+│        │   residuals.png
+│        │   outcome_by_age.png
+│        │   outcome_by_occupation.png
+└───syntax
+│   │   00_packages.R
+│   │   01_load_data.R
+│   │   02_data_wrangling.R
+│   │   03_exploratory_plots.R
+│   │   04_modelling.R
+│   │   05_final_plots_tables.R
+└───temp
+```
+
+-------------------------------------------------
+
+## Dependencias de los scripts en R
+
+
+:::: fragment
+
+```text
+project
+└───syntax
+│   │   00_packages.R
+│   │   01_load_data.R
+│   │   02_data_wrangling.R
+│   │   03_exploratory_plots.R
+│   │   04_modelling.R
+│   │   05_final_plots_tables.R
+```
+
+::::
+
+- El scripts 01 depende de 00
+- El script 02 depende de 01 (y 00)
+- El script 03 depende de 02 (y 01 y 00)
+- El script 04 depende de 03 (y 02 y 01 y 00)
+- ...
+
+::: fragment
+::: {.callout-tip title = "Atajos del teclado"}
+
+¡Escribe todo esto (en un archivo README.md)!
+:::
+:::
+
+-------------------------------------------------
+
+## Otros consejos útiles
+
+### Problema: su coautor utiliza una versión de paquete diferente
+
+:::: {.columns}
+::: {.column width="50%"}
+[**renv:**](https://rstudio.github.io/renv/articles/renv.html)
+
+- Aislar el entorno del proyecto
+- Fijar versiones específicas del paquete R a cada proyecto
+- Hace que sea más fácil utilizar la misma versión que los colaboradores
+:::
+
+::: {.column width="50%"}
+![](https://rstudio.github.io/renv/logo.svg){width=60% fig-align="center"}
+:::
+::::
+
+-------------------------------------------------
+
+## Otros consejos útiles
+
+### Problema: su coautor utiliza una versión de diferente de R
+
+:::: {.columns}
+::: {.column width="50%"}
+[**rig:**](https://github.com/r-lib/rig)
+
+- Administrar múltiples versiones de R
+- Cambiar entre diferentes versiones de R para diferentes proyectos
+:::
+
+::: {.column width="50%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/800px-R_logo.svg.png){width=60% fig-align="center"}
+:::
+::::
+
+-------------------------------------------------
+
+## Otros consejos útiles
+
+### Problema: su coautor utiliza una versión de diferente de R
+
+:::: {.columns}
+::: {.column width="50%"}
+[**rix:**](https://github.com/ropensci/rix)
+
+- Utiliza Nix, un administrador de paquetes enfocado en compilaciones reproducibles. 
+
+- Crea entornos específicos del proyecto con una versión personalizada de R, sus paquetes y todas las dependencias del sistema
+:::
+
+::: {.column width="50%"}
+![](imagenes/rix.png){width=60% fig-align="center"}
+:::
+::::
+
+-------------------------------------------------
+
+## Otros consejos útiles
+
+### Problema: Necesito ayuda con el código
+
+:::: {.columns}
+::: {.column width="50%"}
+El paquete `{reprex}` en R facilita la creación de un ejemplo reproducible. Puedes incluir la información de la sesión como por ejemplo versiones del paquete. 
+:::
+
+::: {.column width="50%"}
+![](https://aosmith16.github.io/spring-r-topics/slides/figs/reprex.png){width=60% fig-align="center"}
+:::
+::::
+
+-------------------------------------------------
+
+## Otros consejos útiles
+
+### Problema: Necesito compartir el código con mis compañeros 
+
+:::: {.columns}
+::: {.column width="50%"}
+![](https://cdn.prod.website-files.com/5f5a53e153805db840dae2db/64e79ca5aff2fb7295bfddf9_github-que-es.jpg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](https://miro.medium.com/v2/resize:fit:600/1*p6exlg2Jrl3pimjPy7R-sA.png){width=60% fig-align="center"}
+:::
+::::
+
