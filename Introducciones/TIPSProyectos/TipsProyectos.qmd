@@ -30,6 +30,8 @@ editor: visual
 -->
 ```
 
+------------------------------------------------------------------------
+
 ## Competencias transversales a evaluar en trabajos prácticos
 
 -   Organización del equipo de trabajo.
@@ -601,9 +603,11 @@ project
 
 -------------------------------------------------
 
-## Otros consejos útiles
+# Otros consejos útiles
 
-### Problema: su coautor utiliza una versión de paquete diferente
+-------------------------------------------------
+
+## Problema: su coautor utiliza una versión de paquete diferente
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -621,9 +625,7 @@ project
 
 -------------------------------------------------
 
-## Otros consejos útiles
-
-### Problema: su coautor utiliza una versión de diferente de R
+## Problema: su coautor utiliza una versión de diferente de R
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -640,9 +642,7 @@ project
 
 -------------------------------------------------
 
-## Otros consejos útiles
-
-### Problema: su coautor utiliza una versión de diferente de R
+## Problema: su coautor utiliza una versión de diferente de R
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -660,9 +660,7 @@ project
 
 -------------------------------------------------
 
-## Otros consejos útiles
-
-### Problema: Necesito ayuda con el código
+## Problema: Necesito ayuda con el código
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -676,9 +674,7 @@ El paquete `{reprex}` en R facilita la creación de un ejemplo reproducible. Pue
 
 -------------------------------------------------
 
-## Otros consejos útiles
-
-### Problema: Necesito compartir el código con mis compañeros 
+## Problema: Necesito compartir el código con mis compañeros 
 
 :::: {.columns}
 ::: {.column width="50%"}
