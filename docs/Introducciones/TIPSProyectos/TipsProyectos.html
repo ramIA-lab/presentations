@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.33">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.37">
 
   <meta name="author" content="Dra. Karina Gibert">
   <title>Presentacions – Tips para el proyecto/trabajo práctico</title>
@@ -94,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e0dae81e06e4f9e500a41fac832b16c0.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-191ddbbc25beeb27917483f50a4b59ba.css">
   <link rel="stylesheet" href="logo.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -190,7 +190,9 @@
     }
   </style>
   <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
   <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -386,16 +388,20 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 
 </section>
 <section>
-<section id="proyectos-y-rutas-de-archivos" class="title-slide slide level1 center">
-<h1>Proyectos y rutas de archivos</h1>
+<section id="buenas-prácticas-de-trabajo" class="title-slide slide level1 center">
+<h1>Buenas prácticas de trabajo</h1>
 
 </section>
 <section class="slide level2">
 
 </section></section>
 <section>
-<section id="problema-cada-componente-del-grupo-tiene-en-una-ruta-diferente-su-base-de-datos" class="title-slide slide level1 center">
-<h1>Problema: Cada componente del grupo tiene en una ruta diferente su base de datos</h1>
+<section id="proyectos-y-rutas-de-archivos" class="title-slide slide level1 center">
+<h1>Proyectos y rutas de archivos</h1>
+
+</section>
+<section id="problema-cada-componente-del-grupo-tiene-en-una-ruta-diferente-su-base-de-datos" class="slide level2">
+<h2>Problema: Cada componente del grupo tiene en una ruta diferente su base de datos</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/username/OneDrive/R code/LOS.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -437,6 +443,7 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 </div>
 </div>
 </div>
+<p><br><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>R</span>
@@ -455,8 +462,8 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 
 </section></section>
 <section>
-<section id="organizar-un-guión" class="title-slide slide level1 center">
-<h1>Organizar un guión</h1>
+<section id="organizar-un-script" class="title-slide slide level1 center">
+<h1>Organizar un <em>Script</em></h1>
 
 </section>
 <section id="añadir-comentarios" class="slide level2">
@@ -464,6 +471,7 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <ul>
 <li class="fragment">Añadir comentarios usando la <code>#</code> en R (en lineas separadas)</li>
 </ul>
+<div class="fragment">
 <div title="*Mala praxis*">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -479,17 +487,21 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 </div>
 </div>
 </div>
-<div title="*Mala praxis*">
+</div>
+<p><br><br></p>
+<div class="fragment">
+<div title="*Buena praxis*">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong><em>Mala praxis</em></strong></p>
+<p><strong><em>Buena praxis</em></strong></p>
 </div>
 <div class="callout-content">
 <p>Los comentarios deberían explicar <strong>POR QUÉ</strong> lo hiciste.</p>
+</div>
 </div>
 </div>
 </div>
@@ -498,16 +510,180 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <section id="secciones-y-subsecciones" class="slide level2">
 <h2>Secciones y subsecciones</h2>
 <p>Puedes añadir secciones y subsecciones al código:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a># Load data ---------------------------------------</span>
 <span id="cb6-2"><a></a></span>
 <span id="cb6-3"><a></a>## Geospatial files -------------------------------</span>
 <span id="cb6-4"><a></a></span>
 <span id="cb6-5"><a></a>## Population files -------------------------------</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:50%;">
-<p><img data-src="imagenes/grafico_script.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imagenes/grafico_script.png" class="quarto-figure quarto-figure-center" width="600" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="estructuración-del-script" class="slide level2">
+<h2>Estructuración del <em>Script</em></h2>
+<ul>
+<li class="fragment"><p>Todas las librerias (<code>library()</code>) se han de colocar al inicio</p></li>
+<li class="fragment"><p>¡No se han de agregar los <code>install.packages()</code> al script! Se han de ejecutar directamente a la consola</p></li>
+<li class="fragment"><p>Se han de dividir en secciones grandes con nombres útiles</p></li>
+</ul>
+</section>
+<section id="estilos-del-script" class="slide level2">
+<h2>Estilos del <em>Script</em></h2>
+<p>Este código se ejecuta sin errores pero…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>starwars <span class="sc">|&gt;</span> <span class="fu">filter</span>(height<span class="sc">&gt;</span><span class="dv">100</span>) <span class="sc">|&gt;</span><span class="fu">select</span>(eye_color, mass)<span class="sc">|&gt;</span> <span class="fu">group_by</span>(eye_color) <span class="sc">|&gt;</span><span class="fu">summarise</span>(<span class="at">mean_mass =</span><span class="fu">mean</span>(mass, <span class="at">na.rm =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br><br></p>
+<p>Este es el mismo código:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>starwars <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a></a>  <span class="fu">filter</span>(height <span class="sc">&gt;</span> <span class="dv">100</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a></a>  <span class="fu">select</span>(eye_color, mass) <span class="sc">|&gt;</span> </span>
+<span id="cb8-4"><a></a>  <span class="fu">group_by</span>(eye_color) <span class="sc">|&gt;</span> </span>
+<span id="cb8-5"><a></a>  <span class="fu">summarise</span>(<span class="at">mean_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="linting" class="slide level2">
+<h2><em>Linting</em></h2>
+<p><strong>Linting</strong>: Análisis del código fuente para detectar:</p>
+<ul>
+<li class="fragment"><p><strong>cuestiones de estilo</strong>: <code>x&lt;-3</code> a <code>x &lt;- 3</code></p></li>
+<li class="fragment"><p><strong>errores comunes</strong>: <code>mean(x, na.rm = T, na.rm = F)</code></p></li>
+<li class="fragment"><p><strong>paquetes faltantes</strong></p></li>
+<li class="fragment"><p>…</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>En R, el control del <em>linting</em> lo realiza el paquete <a href="https://lintr.r-lib.org/"><code>{lintr}</code></a></p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imagenes/lintr_packages.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </div></div>
+</section>
+<section id="lintr" class="slide level2">
+<h2>lintr</h2>
+<p>Ejecutando el comando: <code>lintr::lint("file.R")</code></p>
+
+<img data-src="imagenes/lintr_ejecucion.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="styling" class="slide level2">
+<h2>Styling</h2>
+<p>{lintr} es el paquete que permite identificar <strong>el qué</strong> está mal pero no soluciona los problemas.</p>
+<p><br><br></p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>El paquete de R <a href="https://styler.r-lib.org/"><code>{styler}</code></a> le dará estilo al código</p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="https://styler.r-lib.org/reference/figures/logo.png" class="quarto-figure quarto-figure-left" style="width:60.0%"></p>
+</figure>
+</div>
+</div></div>
+<div title="Atajos del teclado">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Atajos del teclado</strong></p>
+</div>
+<div class="callout-content">
+<p>Mediante la función <code>styler::style_active_file()</code> se activa el cambio de estilo de código</p>
+<p>El paquete <code>{styler}</code> no soluciona todos los problemas encontrados en <code>{lintr}</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="buenas-prácticas-de-google" class="slide level2">
+<h2>Buenas prácticas de Google</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Google pone a disposición de los desarrolladores un <a href="https://google.github.io/styleguide/">código de buenas prácticas</a> con todo lo que ha de tener en cuenta un desarrollador para la escritura de código.</p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imagenes/google.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="múltiples-scripts-y-carpetas" class="title-slide slide level1 center">
+<h1>Múltiples <em>scripts</em> y carpetas</h1>
+
+</section>
+<section id="dividir-scripts-de-r" class="slide level2">
+<h2>Dividir scripts de R</h2>
+<p>Imagina una estructura de directorio como esta:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>project</span>
+<span id="cb9-2"><a></a>│   Rscript.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>que contiene todo el código del proyecto.</p>
+<p>Esto está bien pero:</p>
+<ul>
+<li class="fragment"><p>No es genial si <code>RScript.R</code> contiene 4.000 líneas</p></li>
+<li class="fragment"><p>Las secciones y subsecciones son geniales, pero a veces no son suficientes para separar todo el código</p></li>
+<li class="fragment"><p>No es un nombre muy descriptivo</p></li>
+<li class="fragment"><p>Es un script que problablemente hace muchas cosas diferentes</p></li>
+</ul>
+</section>
+<section id="dividir-scripts-de-r-1" class="slide level2">
+<h2>Dividir scripts de R</h2>
+
+<img data-src="imagenes/proceso_KDD.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="varios-archivos" class="slide level2">
+<h2>Varios archivos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="nombres-aceptables">Nombres aceptables</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>project</span>
+<span id="cb10-2"><a></a>│   data wrangling.R</span>
+<span id="cb10-3"><a></a>│   load data.R</span>
+<span id="cb10-4"><a></a>│   modelling.R</span>
+<span id="cb10-5"><a></a>│   packages.R</span>
+<span id="cb10-6"><a></a>│   plots.R</span>
+<span id="cb10-7"><a></a>│   plots2.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h4 id="mejores-nombres">Mejores nombres</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>project</span>
+<span id="cb11-2"><a></a>│   00_packages.R</span>
+<span id="cb11-3"><a></a>│   01_load_data.R</span>
+<span id="cb11-4"><a></a>│   02_data_wrangling.R</span>
+<span id="cb11-5"><a></a>│   03_exploratory_plots.R</span>
+<span id="cb11-6"><a></a>│   04_modelling.R</span>
+<span id="cb11-7"><a></a>│   05_final_plots_tables.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div title="Atajos del teclado">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Atajos del teclado</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment"><p>Prefijo con números para darles un orden (añadir ceros a la izquierda)</p></li>
+<li class="fragment"><p>Dar nombres sensatos y descriptivos</p></li>
+<li class="fragment"><p>Evitar los espacios (o <code>_</code> o <code>-</code>)</p></li>
+</ul>
+<div class="fragment">
+<p>Nota: En los nombres de las variables y funciones se aplican el mismo criterio</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 </section></section>
@@ -730,42 +906,80 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -846,8 +1060,6 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')

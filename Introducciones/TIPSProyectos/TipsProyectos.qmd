@@ -218,11 +218,15 @@ La única forma de comunicar con claridad es haciendo coincidir los mensajes ver
 
 ------------------------------------------------------------------------
 
+# Buenas prácticas de trabajo
+
+------------------------------------------------------------------------
+
 # Proyectos y rutas de archivos
 
 ------------------------------------------------------------------------
 
-# Problema: Cada componente del grupo tiene en una ruta diferente su base de datos
+## Problema: Cada componente del grupo tiene en una ruta diferente su base de datos
 
 ```{r}
 #| echo: true
@@ -266,6 +270,8 @@ Abra RStudio, luego haga clic en **Archivo** -\> **Nuevo proyecto** -\> **Nuevo 
 Mantenga todo lo relacionado con su análisis junto, y fácil de encontrar para R usando proyectos.
 :::
 
+<br></br>
+
 ::::: columns
 ::: {.column width="50%"}
 
@@ -293,7 +299,7 @@ project folder
 
 ------------------------------------------------------------------------
 
-# Organizar un guión
+# Organizar un *Script*
 
 ------------------------------------------------------------------------
 
@@ -301,12 +307,18 @@ project folder
 
 - Añadir comentarios usando la `#` en R (en lineas separadas)
 
+::: fragment
 ::: {.callout-important title = "*Mala praxis*"}
 Los comentarios no necesitan explicar lo que hace tu código.
 :::
+:::
 
+<br></br>
+
+::: fragment
 ::: {.callout-tip title = "*Buena praxis*"}
 Los comentarios deberían explicar **POR QUÉ** lo hiciste.
+:::
 :::
 
 ------------------------------------------------------------------------
@@ -315,8 +327,6 @@ Los comentarios deberían explicar **POR QUÉ** lo hiciste.
 
 Puedes añadir secciones y subsecciones al código:
 
-::::: columns
-::: {.column width="50%"}
 ```text
 # Load data ---------------------------------------
 
@@ -324,8 +334,202 @@ Puedes añadir secciones y subsecciones al código:
 
 ## Population files -------------------------------
 ```
+
+![](imagenes/grafico_script.png){width="600" height="400" fig-align="center"}
+
+------------------------------------------------------------------------
+
+## Estructuración del *Script*
+
+- Todas las librerias (`library()`) se han de colocar al inicio
+
+- ¡No se han de agregar los `install.packages()` al script! Se han de ejecutar directamente a la consola
+
+- Se han de dividir en secciones grandes con nombres útiles
+
+------------------------------------------------------------------------
+
+## Estilos del *Script*
+
+Este código se ejecuta sin errores pero...
+
+```{r}
+#| echo: true
+#| eval: false
+
+starwars |> filter(height>100) |>select(eye_color, mass)|> group_by(eye_color) |>summarise(mean_mass =mean(mass, na.rm = T))
+```
+
+<br></br>
+
+Este es el mismo código:
+
+```{r}
+#| echo: true
+#| eval: false
+
+starwars |> 
+  filter(height > 100) |> 
+  select(eye_color, mass) |> 
+  group_by(eye_color) |> 
+  summarise(mean_mass = mean(mass, na.rm = TRUE))
+```
+
+------------------------------------------------------------------------
+
+## *Linting*
+
+**Linting**: Análisis del código fuente para detectar: 
+
+- **cuestiones de estilo**: `x<-3` a `x <- 3`
+- **errores comunes**: `mean(x, na.rm = T, na.rm = F)`
+
+- **paquetes faltantes**
+
+- ...
+
+:::: {.columns}
+::: {.column width="70%"}
+En R, el control del *linting* lo realiza el paquete [`{lintr}`](https://lintr.r-lib.org/)
 :::
+
+::: {.column width="30%"}
+![](imagenes/lintr_packages.png){fig-align="center"}
+:::
+::::
+
+-------------------------------------------------
+
+## lintr
+
+Ejecutando el comando: `lintr::lint("file.R")`
+
+![](imagenes/lintr_ejecucion.png){fig-align="center"}
+
+
+-------------------------------------------------
+
+## Styling
+
+{lintr} es el paquete que permite identificar **el qué** está mal pero no soluciona los problemas. 
+
+<br></br>
+
+:::: {.columns}
+::: {.column width="70%"}
+El paquete de R [`{styler}`](https://styler.r-lib.org/) le dará estilo al código
+:::
+
+::: {.column width="30%"}
+![](https://styler.r-lib.org/reference/figures/logo.png){width=60% fig-align="left"}
+:::
+::::
+
+::: {.callout-tip title = "Atajos del teclado"}
+
+Mediante la función `styler::style_active_file()` se activa el cambio de estilo de código
+
+El paquete `{styler}` no soluciona todos los problemas encontrados en `{lintr}`.
+::: 
+
+-------------------------------------------------
+
+## Buenas prácticas de Google 
+
+:::: {.columns}
+::: {.column width="60%"}
+
+Google pone a disposición de los desarrolladores un [código de buenas prácticas](https://google.github.io/styleguide/) con todo lo que ha de tener en cuenta un desarrollador para la escritura de código.
+
+:::
+
+::: {.column width="40%"}
+
+![](imagenes/google.png){fig-align="center"}
+
+:::
+::::
+
+
+-------------------------------------------------
+
+# Múltiples *scripts* y carpetas
+
+-------------------------------------------------
+
+## Dividir scripts de R
+
+Imagina una estructura de directorio como esta: 
+
+```text
+project
+│   Rscript.R
+```
+que contiene todo el código del proyecto. 
+
+Esto está bien pero: 
+
+- No es genial si `RScript.R` contiene 4.000 líneas
+
+- Las secciones y subsecciones son geniales, pero a veces no son suficientes para separar todo el código
+
+- No es un nombre muy descriptivo
+
+- Es un script que problablemente hace muchas cosas diferentes
+
+-------------------------------------------------
+
+## Dividir scripts de R
+
+![](imagenes/proceso_KDD.png){fig-align="center"}
+
+-------------------------------------------------
+
+## Varios archivos
+
+:::: {.columns}
 ::: {.column width="50%"}
-![](imagenes/grafico_script.png)
+
+#### Nombres aceptables 
+
+```text
+project
+│   data wrangling.R
+│   load data.R
+│   modelling.R
+│   packages.R
+│   plots.R
+│   plots2.R
+```
 :::
-::::: 
+
+::: {.column width="50%"}
+
+#### Mejores nombres
+
+```text
+project
+│   00_packages.R
+│   01_load_data.R
+│   02_data_wrangling.R
+│   03_exploratory_plots.R
+│   04_modelling.R
+│   05_final_plots_tables.R
+```
+:::
+::::
+
+::: {.callout-tip title = "Atajos del teclado"}
+
+- Prefijo con números para darles un orden (añadir ceros a la izquierda)
+
+- Dar nombres sensatos y descriptivos
+
+- Evitar los espacios (o `_` o `-`)
+
+::: fragment
+Nota: En los nombres de las variables y funciones se aplican el mismo criterio
+:::
+:::
+
+

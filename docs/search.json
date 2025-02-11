@@ -172,7 +172,7 @@
     "href": "Introducciones/TIPSProyectos/TipsProyectos.html#carpetas-de-proyectos",
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Carpetas de proyectos",
-    "text": "Carpetas de proyectos\n\n\n\n\n\n\n\nUsar proyectos de R\n\n\nMantenga todo lo relacionado con su análisis junto, y fácil de encontrar para R usando proyectos.\n\n\n\n\n\n\nR\n│   messy_example_script.R\n│   R scripts for other project 1.R\n│   R scripts for other project 2.R\n│   R scripts for other project 3.R\n\nproject folder\n│   messy_example_script.R\n|   data.csv\n|   project_name.Rproj"
+    "text": "Carpetas de proyectos\n\n\n\n\n\n\n\nUsar proyectos de R\n\n\nMantenga todo lo relacionado con su análisis junto, y fácil de encontrar para R usando proyectos.\n\n\n\n\n\n\n\nR\n│   messy_example_script.R\n│   R scripts for other project 1.R\n│   R scripts for other project 2.R\n│   R scripts for other project 3.R\n\nproject folder\n│   messy_example_script.R\n|   data.csv\n|   project_name.Rproj"
   },
   {
     "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#carpetas-de-proyectos-1",
@@ -186,13 +186,104 @@
     "href": "Introducciones/TIPSProyectos/TipsProyectos.html#añadir-comentarios",
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Añadir comentarios",
-    "text": "Añadir comentarios\n\nAñadir comentarios usando la # en R (en lineas separadas)\n\n\n\n\n\n\n\n\nMala praxis\n\n\nLos comentarios no necesitan explicar lo que hace tu código.\n\n\n\n\n\n\n\n\n\n\n\nMala praxis\n\n\nLos comentarios deberían explicar POR QUÉ lo hiciste."
+    "text": "Añadir comentarios\n\nAñadir comentarios usando la # en R (en lineas separadas)\n\n\n\n\n\n\n\n\n\nMala praxis\n\n\nLos comentarios no necesitan explicar lo que hace tu código.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBuena praxis\n\n\nLos comentarios deberían explicar POR QUÉ lo hiciste."
   },
   {
     "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#secciones-y-subsecciones",
     "href": "Introducciones/TIPSProyectos/TipsProyectos.html#secciones-y-subsecciones",
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Secciones y subsecciones",
-    "text": "Secciones y subsecciones\nPuedes añadir secciones y subsecciones al código:\n\n\n# Load data ---------------------------------------\n\n## Geospatial files -------------------------------\n\n## Population files -------------------------------"
+    "text": "Secciones y subsecciones\nPuedes añadir secciones y subsecciones al código:\n# Load data ---------------------------------------\n\n## Geospatial files -------------------------------\n\n## Population files -------------------------------"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#estructuración-del-script",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#estructuración-del-script",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Estructuración del Script",
+    "text": "Estructuración del Script\n\nTodas las librerias (library()) se han de colocar al inicio\n¡No se han de agregar los install.packages() al script! Se han de ejecutar directamente a la consola\nSe han de dividir en secciones grandes con nombres útiles"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#estilos-del-script",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#estilos-del-script",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Estilos del Script",
+    "text": "Estilos del Script\nEste código se ejecuta sin errores pero…\n\nstarwars |&gt; filter(height&gt;100) |&gt;select(eye_color, mass)|&gt; group_by(eye_color) |&gt;summarise(mean_mass =mean(mass, na.rm = T))\n\n\nEste es el mismo código:\n\nstarwars |&gt; \n  filter(height &gt; 100) |&gt; \n  select(eye_color, mass) |&gt; \n  group_by(eye_color) |&gt; \n  summarise(mean_mass = mean(mass, na.rm = TRUE))"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#linting",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#linting",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Linting",
+    "text": "Linting\nLinting: Análisis del código fuente para detectar:\n\ncuestiones de estilo: x&lt;-3 a x &lt;- 3\nerrores comunes: mean(x, na.rm = T, na.rm = F)\npaquetes faltantes\n…\n\n\n\nEn R, el control del linting lo realiza el paquete {lintr}"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#lintr",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#lintr",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "lintr",
+    "text": "lintr\nEjecutando el comando: lintr::lint(\"file.R\")"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#styling",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#styling",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Styling",
+    "text": "Styling\n{lintr} es el paquete que permite identificar el qué está mal pero no soluciona los problemas.\n\n\n\nEl paquete de R {styler} le dará estilo al código\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtajos del teclado\n\n\nMediante la función styler::style_active_file() se activa el cambio de estilo de código\nEl paquete {styler} no soluciona todos los problemas encontrados en {lintr}."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#proyectos-y-rutas-de-archivos",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#proyectos-y-rutas-de-archivos",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Proyectos y rutas de archivos",
+    "text": "Proyectos y rutas de archivos"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#organizar-un-script",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#organizar-un-script",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Organizar un Script",
+    "text": "Organizar un Script"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#múltiples-scripts-y-carpetas",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#múltiples-scripts-y-carpetas",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Múltiples scripts y carpetas",
+    "text": "Múltiples scripts y carpetas"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-cada-componente-del-grupo-tiene-en-una-ruta-diferente-su-base-de-datos",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-cada-componente-del-grupo-tiene-en-una-ruta-diferente-su-base-de-datos",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Problema: Cada componente del grupo tiene en una ruta diferente su base de datos",
+    "text": "Problema: Cada componente del grupo tiene en una ruta diferente su base de datos\n\ndata &lt;- read_csv(\"C:/Users/username/OneDrive/R code/LOS.csv\")\n\nO tal vez …\n\nsetwd(\"C:/Users/username/OneDrive/R code\")\n\n\nUna forma fácil de hacer esto es usando un proyecto R\n\nUtilice un nuevo proyecto R para cada proyecto de análisis\nHaga doble clic en el archivo del proyecto para abrir RStudio con sus archivos en el lugar correcto."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#buenas-prácticas-de-google",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#buenas-prácticas-de-google",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Buenas prácticas de Google",
+    "text": "Buenas prácticas de Google\n\n\nGoogle pone a disposición de los desarrolladores un código de buenas prácticas con todo lo que ha de tener en cuenta un desarrollador para la escritura de código."
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#dividir-scripts-de-r",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#dividir-scripts-de-r",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Dividir scripts de R",
+    "text": "Dividir scripts de R\nImagina una estructura de directorio como esta:\nproject\n│   Rscript.R\nque contiene todo el código del proyecto.\nEsto está bien pero:\n\nNo es genial si RScript.R contiene 4.000 líneas\nLas secciones y subsecciones son geniales, pero a veces no son suficientes para separar todo el código\nNo es un nombre muy descriptivo\nEs un script que problablemente hace muchas cosas diferentes"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#dividir-scripts-de-r-1",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#dividir-scripts-de-r-1",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Dividir scripts de R",
+    "text": "Dividir scripts de R"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#varios-archivos",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#varios-archivos",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Varios archivos",
+    "text": "Varios archivos\n\n\nNombres aceptables\nproject\n│   data wrangling.R\n│   load data.R\n│   modelling.R\n│   packages.R\n│   plots.R\n│   plots2.R\n\nMejores nombres\nproject\n│   00_packages.R\n│   01_load_data.R\n│   02_data_wrangling.R\n│   03_exploratory_plots.R\n│   04_modelling.R\n│   05_final_plots_tables.R\n\n\n\n\n\n\n\n\nAtajos del teclado\n\n\n\nPrefijo con números para darles un orden (añadir ceros a la izquierda)\nDar nombres sensatos y descriptivos\nEvitar los espacios (o _ o -)\n\n\nNota: En los nombres de las variables y funciones se aplican el mismo criterio"
   }
 ]
