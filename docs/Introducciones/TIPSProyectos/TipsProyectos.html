@@ -257,13 +257,42 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <section id="diagrama-de-gantt" class="slide level2">
 <h2>Diagrama de Gantt</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>pp <span class="ot">&lt;-</span> <span class="fu">ganttrify</span>(crono,</span>
-<span id="cb1-2"><a></a>          <span class="at">by_date =</span> T,</span>
-<span id="cb1-3"><a></a>          <span class="at">size_text_relative =</span> <span class="dv">1</span>, </span>
-<span id="cb1-4"><a></a>          <span class="at">mark_quarters =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-5"><a></a>          <span class="at">exact_date =</span> T,</span>
-<span id="cb1-6"><a></a>          <span class="at">colour_palette =</span> <span class="fu">c</span>(<span class="st">"orange2"</span>,<span class="st">"blue"</span>, <span class="st">"red"</span>),</span>
-<span id="cb1-7"><a></a>          <span class="at">month_number =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(ganttrify)</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a>crono <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv2</span>(<span class="st">"cono.csv"</span>, </span>
+<span id="cb1-5"><a></a>            <span class="at">col_types =</span> readr<span class="sc">::</span><span class="fu">cols</span>(<span class="at">Final =</span> readr<span class="sc">::</span><span class="fu">col_date</span>(<span class="at">format =</span> <span class="st">"%d/%m/%Y"</span>), </span>
+<span id="cb1-6"><a></a>            <span class="at">Inicio =</span> readr<span class="sc">::</span><span class="fu">col_date</span>(<span class="at">format =</span> <span class="st">"%d/%m/%Y"</span>)))</span>
+<span id="cb1-7"><a></a><span class="fu">colnames</span>(crono) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"wp"</span>, <span class="st">"activity"</span>, <span class="st">"start_date"</span>, <span class="st">"end_date"</span>)</span>
+<span id="cb1-8"><a></a>crono<span class="sc">$</span>start_date <span class="ot">&lt;-</span> lubridate<span class="sc">::</span><span class="fu">ymd</span>(crono<span class="sc">$</span>start_date)</span>
+<span id="cb1-9"><a></a>crono<span class="sc">$</span>end_date <span class="ot">&lt;-</span> lubridate<span class="sc">::</span><span class="fu">ymd</span>(crono<span class="sc">$</span>end_date)</span>
+<span id="cb1-10"><a></a><span class="fu">print</span>(crono)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 4
+  wp      activity      start_date end_date  
+  &lt;chr&gt;   &lt;chr&gt;         &lt;date&gt;     &lt;date&gt;    
+1 Etapa 1 Actividad 1   2020-01-01 2020-02-01
+2 Etapa 1 Actividad 2   2020-02-01 2020-03-01
+3 Etapa 1 Actividad 3   2020-03-01 2020-06-01
+4 Etapa 2 Actividad 2.1 2020-04-01 2020-05-01
+5 Etapa 2 Actividad 2.2 2020-05-01 2020-07-01
+6 Etapa 2 Actividad 2.3 2020-06-01 2020-07-01
+7 Etapa 3 Actividad a   2020-08-01 2020-10-01
+8 Etapa 3 Actividad b   2020-09-01 2020-11-01
+9 Etapa 3 Actividad c   2020-08-01 2020-12-01</code></pre>
+</div>
+</div>
+</section>
+<section id="diagrama-de-gantt-1" class="slide level2">
+<h2>Diagrama de Gantt</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>pp <span class="ot">&lt;-</span> <span class="fu">ganttrify</span>(crono,</span>
+<span id="cb3-2"><a></a>          <span class="at">by_date =</span> T,</span>
+<span id="cb3-3"><a></a>          <span class="at">size_text_relative =</span> <span class="dv">1</span>, </span>
+<span id="cb3-4"><a></a>          <span class="at">mark_quarters =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb3-5"><a></a>          <span class="at">exact_date =</span> T,</span>
+<span id="cb3-6"><a></a>          <span class="at">colour_palette =</span> <span class="fu">c</span>(<span class="st">"orange2"</span>,<span class="st">"blue"</span>, <span class="st">"red"</span>),</span>
+<span id="cb3-7"><a></a>          <span class="at">month_number =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <img data-src="TipsProyectos_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1152"></section>
@@ -400,11 +429,11 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <section id="problema-cada-componente-del-grupo-tiene-en-una-ruta-diferente-su-base-de-datos" class="slide level2">
 <h2>Problema: Cada componente del grupo tiene en una ruta diferente su base de datos</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/username/OneDrive/R code/LOS.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/username/OneDrive/R code/LOS.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>O tal vez …</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">setwd</span>(<span class="st">"C:/Users/username/OneDrive/R code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">setwd</span>(<span class="st">"C:/Users/username/OneDrive/R code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li class="fragment"><p>Una forma fácil de hacer esto es usando un proyecto R</p>
@@ -443,16 +472,16 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <p><br><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>R</span>
-<span id="cb4-2"><a></a>│   messy_example_script.R</span>
-<span id="cb4-3"><a></a>│   R scripts for other project 1.R</span>
-<span id="cb4-4"><a></a>│   R scripts for other project 2.R</span>
-<span id="cb4-5"><a></a>│   R scripts for other project 3.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>R</span>
+<span id="cb6-2"><a></a>│   messy_example_script.R</span>
+<span id="cb6-3"><a></a>│   R scripts for other project 1.R</span>
+<span id="cb6-4"><a></a>│   R scripts for other project 2.R</span>
+<span id="cb6-5"><a></a>│   R scripts for other project 3.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>project folder</span>
-<span id="cb5-2"><a></a>│   messy_example_script.R</span>
-<span id="cb5-3"><a></a>|   data.csv</span>
-<span id="cb5-4"><a></a>|   project_name.Rproj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>project folder</span>
+<span id="cb7-2"><a></a>│   messy_example_script.R</span>
+<span id="cb7-3"><a></a>|   data.csv</span>
+<span id="cb7-4"><a></a>|   project_name.Rproj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section></section>
 <section>
@@ -504,11 +533,11 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <section id="secciones-y-subsecciones" class="slide level2">
 <h2>Secciones y subsecciones</h2>
 <p>Puedes añadir secciones y subsecciones al código:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a># Load data ---------------------------------------</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>## Geospatial files -------------------------------</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a>## Population files -------------------------------</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a># Load data ---------------------------------------</span>
+<span id="cb8-2"><a></a></span>
+<span id="cb8-3"><a></a>## Geospatial files -------------------------------</span>
+<span id="cb8-4"><a></a></span>
+<span id="cb8-5"><a></a>## Population files -------------------------------</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imagenes/grafico_script.png" class="quarto-figure quarto-figure-center" width="600" height="400"></p>
@@ -527,16 +556,16 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <h2>Estilos del <em>Script</em></h2>
 <p>Este código se ejecuta sin errores pero…</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>starwars <span class="sc">|&gt;</span> <span class="fu">filter</span>(height<span class="sc">&gt;</span><span class="dv">100</span>) <span class="sc">|&gt;</span><span class="fu">select</span>(eye_color, mass)<span class="sc">|&gt;</span> <span class="fu">group_by</span>(eye_color) <span class="sc">|&gt;</span><span class="fu">summarise</span>(<span class="at">mean_mass =</span><span class="fu">mean</span>(mass, <span class="at">na.rm =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>starwars <span class="sc">|&gt;</span> <span class="fu">filter</span>(height<span class="sc">&gt;</span><span class="dv">100</span>) <span class="sc">|&gt;</span><span class="fu">select</span>(eye_color, mass)<span class="sc">|&gt;</span> <span class="fu">group_by</span>(eye_color) <span class="sc">|&gt;</span><span class="fu">summarise</span>(<span class="at">mean_mass =</span><span class="fu">mean</span>(mass, <span class="at">na.rm =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br><br></p>
 <p>Este es el mismo código:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>starwars <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a></a>  <span class="fu">filter</span>(height <span class="sc">&gt;</span> <span class="dv">100</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb8-3"><a></a>  <span class="fu">select</span>(eye_color, mass) <span class="sc">|&gt;</span> </span>
-<span id="cb8-4"><a></a>  <span class="fu">group_by</span>(eye_color) <span class="sc">|&gt;</span> </span>
-<span id="cb8-5"><a></a>  <span class="fu">summarise</span>(<span class="at">mean_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>starwars <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a></a>  <span class="fu">filter</span>(height <span class="sc">&gt;</span> <span class="dv">100</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-3"><a></a>  <span class="fu">select</span>(eye_color, mass) <span class="sc">|&gt;</span> </span>
+<span id="cb10-4"><a></a>  <span class="fu">group_by</span>(eye_color) <span class="sc">|&gt;</span> </span>
+<span id="cb10-5"><a></a>  <span class="fu">summarise</span>(<span class="at">mean_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="linting" class="slide level2">
@@ -616,8 +645,8 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <section id="dividir-scripts-de-r" class="slide level2">
 <h2>Dividir scripts de R</h2>
 <p>Imagina una estructura de directorio como esta:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>project</span>
-<span id="cb9-2"><a></a>│   Rscript.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>project</span>
+<span id="cb11-2"><a></a>│   Rscript.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>que contiene todo el código del proyecto.</p>
 <p>Esto está bien pero:</p>
 <ul>
@@ -636,22 +665,22 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <div class="columns">
 <div class="column" style="width:50%;">
 <h4 id="nombres-aceptables">Nombres aceptables</h4>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>project</span>
-<span id="cb10-2"><a></a>│   data wrangling.R</span>
-<span id="cb10-3"><a></a>│   load data.R</span>
-<span id="cb10-4"><a></a>│   modelling.R</span>
-<span id="cb10-5"><a></a>│   packages.R</span>
-<span id="cb10-6"><a></a>│   plots.R</span>
-<span id="cb10-7"><a></a>│   plots2.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>project</span>
+<span id="cb12-2"><a></a>│   data wrangling.R</span>
+<span id="cb12-3"><a></a>│   load data.R</span>
+<span id="cb12-4"><a></a>│   modelling.R</span>
+<span id="cb12-5"><a></a>│   packages.R</span>
+<span id="cb12-6"><a></a>│   plots.R</span>
+<span id="cb12-7"><a></a>│   plots2.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <h4 id="mejores-nombres">Mejores nombres</h4>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>project</span>
-<span id="cb11-2"><a></a>│   00_packages.R</span>
-<span id="cb11-3"><a></a>│   01_load_data.R</span>
-<span id="cb11-4"><a></a>│   02_data_wrangling.R</span>
-<span id="cb11-5"><a></a>│   03_exploratory_plots.R</span>
-<span id="cb11-6"><a></a>│   04_modelling.R</span>
-<span id="cb11-7"><a></a>│   05_final_plots_tables.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>project</span>
+<span id="cb13-2"><a></a>│   00_packages.R</span>
+<span id="cb13-3"><a></a>│   01_load_data.R</span>
+<span id="cb13-4"><a></a>│   02_data_wrangling.R</span>
+<span id="cb13-5"><a></a>│   03_exploratory_plots.R</span>
+<span id="cb13-6"><a></a>│   04_modelling.R</span>
+<span id="cb13-7"><a></a>│   05_final_plots_tables.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <div title="Atajos del teclado">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -679,42 +708,42 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 <section id="varias-carpetas" class="slide level2">
 <h2>Varias carpetas</h2>
 <p>Para una óptima organización del proyecto, la estructura de carpetas que se debería de realizar es la siguiente:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>project</span>
-<span id="cb12-2"><a></a>│   project.Rproj</span>
-<span id="cb12-3"><a></a>│   README.md</span>
-<span id="cb12-4"><a></a>└───data</span>
-<span id="cb12-5"><a></a>│   │   data_inicial.RData</span>
-<span id="cb12-6"><a></a>│   │   data_preprocessada.RData</span>
-<span id="cb12-7"><a></a>│   │   data_modelling.RData</span>
-<span id="cb12-8"><a></a>└───docs</span>
-<span id="cb12-9"><a></a>└───inputs</span>
-<span id="cb12-10"><a></a>│   │   data.csv</span>
-<span id="cb12-11"><a></a>└───outputs</span>
-<span id="cb12-12"><a></a>│   └─── data_final.csv </span>
-<span id="cb12-13"><a></a>│   └─── plots</span>
-<span id="cb12-14"><a></a>│        │   residuals.png</span>
-<span id="cb12-15"><a></a>│        │   outcome_by_age.png</span>
-<span id="cb12-16"><a></a>│        │   outcome_by_occupation.png</span>
-<span id="cb12-17"><a></a>└───syntax</span>
-<span id="cb12-18"><a></a>│   │   00_packages.R</span>
-<span id="cb12-19"><a></a>│   │   01_load_data.R</span>
-<span id="cb12-20"><a></a>│   │   02_data_wrangling.R</span>
-<span id="cb12-21"><a></a>│   │   03_exploratory_plots.R</span>
-<span id="cb12-22"><a></a>│   │   04_modelling.R</span>
-<span id="cb12-23"><a></a>│   │   05_final_plots_tables.R</span>
-<span id="cb12-24"><a></a>└───temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>project</span>
+<span id="cb14-2"><a></a>│   project.Rproj</span>
+<span id="cb14-3"><a></a>│   README.md</span>
+<span id="cb14-4"><a></a>└───data</span>
+<span id="cb14-5"><a></a>│   │   data_inicial.RData</span>
+<span id="cb14-6"><a></a>│   │   data_preprocessada.RData</span>
+<span id="cb14-7"><a></a>│   │   data_modelling.RData</span>
+<span id="cb14-8"><a></a>└───docs</span>
+<span id="cb14-9"><a></a>└───inputs</span>
+<span id="cb14-10"><a></a>│   │   data.csv</span>
+<span id="cb14-11"><a></a>└───outputs</span>
+<span id="cb14-12"><a></a>│   └─── data_final.csv </span>
+<span id="cb14-13"><a></a>│   └─── plots</span>
+<span id="cb14-14"><a></a>│        │   residuals.png</span>
+<span id="cb14-15"><a></a>│        │   outcome_by_age.png</span>
+<span id="cb14-16"><a></a>│        │   outcome_by_occupation.png</span>
+<span id="cb14-17"><a></a>└───syntax</span>
+<span id="cb14-18"><a></a>│   │   00_packages.R</span>
+<span id="cb14-19"><a></a>│   │   01_load_data.R</span>
+<span id="cb14-20"><a></a>│   │   02_data_wrangling.R</span>
+<span id="cb14-21"><a></a>│   │   03_exploratory_plots.R</span>
+<span id="cb14-22"><a></a>│   │   04_modelling.R</span>
+<span id="cb14-23"><a></a>│   │   05_final_plots_tables.R</span>
+<span id="cb14-24"><a></a>└───temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="dependencias-de-los-scripts-en-r" class="slide level2">
 <h2>Dependencias de los scripts en R</h2>
 <div class="fragment">
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>project</span>
-<span id="cb13-2"><a></a>└───syntax</span>
-<span id="cb13-3"><a></a>│   │   00_packages.R</span>
-<span id="cb13-4"><a></a>│   │   01_load_data.R</span>
-<span id="cb13-5"><a></a>│   │   02_data_wrangling.R</span>
-<span id="cb13-6"><a></a>│   │   03_exploratory_plots.R</span>
-<span id="cb13-7"><a></a>│   │   04_modelling.R</span>
-<span id="cb13-8"><a></a>│   │   05_final_plots_tables.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>project</span>
+<span id="cb15-2"><a></a>└───syntax</span>
+<span id="cb15-3"><a></a>│   │   00_packages.R</span>
+<span id="cb15-4"><a></a>│   │   01_load_data.R</span>
+<span id="cb15-5"><a></a>│   │   02_data_wrangling.R</span>
+<span id="cb15-6"><a></a>│   │   03_exploratory_plots.R</span>
+<span id="cb15-7"><a></a>│   │   04_modelling.R</span>
+<span id="cb15-8"><a></a>│   │   05_final_plots_tables.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li class="fragment">El scripts 01 depende de 00</li>
@@ -740,9 +769,6 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 </div>
 </div>
 </div>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
 <section id="otros-consejos-útiles" class="title-slide slide level1 center">
@@ -816,6 +842,11 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 </section>
 <section id="problema-necesito-compartir-el-código-con-mis-compañeros" class="slide level2">
 <h2>Problema: Necesito compartir el código con mis compañeros</h2>
+<p>Existen herramientas como <strong>Github</strong> que permite tener siempre actualizado todas las modificaciones de código. Dichos proyectos se pueden realizar tanto en:</p>
+<ul>
+<li class="fragment">proyecto público</li>
+<li class="fragment"><strong>proyecto privado</strong> (Se recomienda para esta asignatura)</li>
+</ul>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">

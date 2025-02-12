@@ -84,18 +84,25 @@ https://quarto.org/docs/presentations/revealjs/advanced.html
 
 ## Diagrama de Gantt
 
-```{r, echo=FALSE}
-#| echo: false
+```{r}
+#| echo: true
+#| eval: true
 
 library(readr)
 library(ganttrify)
 
-crono <- readr::read_csv2("cono.csv", col_types = readr::cols(Final = readr::col_date(format = "%d/%m/%Y"), 
-                                                              Inicio = readr::col_date(format = "%d/%m/%Y")))
+crono <- readr::read_csv2("cono.csv", 
+            col_types = readr::cols(Final = readr::col_date(format = "%d/%m/%Y"), 
+            Inicio = readr::col_date(format = "%d/%m/%Y")))
 colnames(crono) <- c("wp", "activity", "start_date", "end_date")
 crono$start_date <- lubridate::ymd(crono$start_date)
 crono$end_date <- lubridate::ymd(crono$end_date)
+print(crono)
 ```
+
+------------------------------------------------------------------------
+
+## Diagrama de Gantt
 
 ```{r}
 #| echo: true
@@ -597,8 +604,6 @@ project
 :::
 :::
 
--------------------------------------------------
-
 # Otros consejos útiles
 
 -------------------------------------------------
@@ -671,6 +676,11 @@ El paquete `{reprex}` en R facilita la creación de un ejemplo reproducible. Pue
 -------------------------------------------------
 
 ## Problema: Necesito compartir el código con mis compañeros 
+
+Existen herramientas como **Github** que permite tener siempre actualizado todas las modificaciones de código. Dichos proyectos se pueden realizar tanto en: 
+
+- proyecto público 
+- **proyecto privado** (Se recomienda para esta asignatura)
 
 :::: {.columns}
 ::: {.column width="50%"}

@@ -109,7 +109,7 @@
     "href": "Introducciones/TIPSProyectos/TipsProyectos.html#diagrama-de-gantt",
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Diagrama de Gantt",
-    "text": "Diagrama de Gantt\n\npp &lt;- ganttrify(crono,\n          by_date = T,\n          size_text_relative = 1, \n          mark_quarters = TRUE,\n          exact_date = T,\n          colour_palette = c(\"orange2\",\"blue\", \"red\"),\n          month_number = F)"
+    "text": "Diagrama de Gantt\n\nlibrary(readr)\nlibrary(ganttrify)\n\ncrono &lt;- readr::read_csv2(\"cono.csv\", \n            col_types = readr::cols(Final = readr::col_date(format = \"%d/%m/%Y\"), \n            Inicio = readr::col_date(format = \"%d/%m/%Y\")))\ncolnames(crono) &lt;- c(\"wp\", \"activity\", \"start_date\", \"end_date\")\ncrono$start_date &lt;- lubridate::ymd(crono$start_date)\ncrono$end_date &lt;- lubridate::ymd(crono$end_date)\nprint(crono)\n\n# A tibble: 9 × 4\n  wp      activity      start_date end_date  \n  &lt;chr&gt;   &lt;chr&gt;         &lt;date&gt;     &lt;date&gt;    \n1 Etapa 1 Actividad 1   2020-01-01 2020-02-01\n2 Etapa 1 Actividad 2   2020-02-01 2020-03-01\n3 Etapa 1 Actividad 3   2020-03-01 2020-06-01\n4 Etapa 2 Actividad 2.1 2020-04-01 2020-05-01\n5 Etapa 2 Actividad 2.2 2020-05-01 2020-07-01\n6 Etapa 2 Actividad 2.3 2020-06-01 2020-07-01\n7 Etapa 3 Actividad a   2020-08-01 2020-10-01\n8 Etapa 3 Actividad b   2020-09-01 2020-11-01\n9 Etapa 3 Actividad c   2020-08-01 2020-12-01"
   },
   {
     "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#cuadrícula-de-asignación",
@@ -368,7 +368,7 @@
     "href": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-necesito-compartir-el-código-con-mis-compañeros",
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Problema: Necesito compartir el código con mis compañeros",
-    "text": "Problema: Necesito compartir el código con mis compañeros"
+    "text": "Problema: Necesito compartir el código con mis compañeros\nExisten herramientas como Github que permite tener siempre actualizado todas las modificaciones de código. Dichos proyectos se pueden realizar tanto en:\n\nproyecto público\nproyecto privado (Se recomienda para esta asignatura)"
   },
   {
     "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-su-coautor-utiliza-una-versión-diferente-de-r",
@@ -383,5 +383,12 @@
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Problema: su coautor utiliza una versión diferente de R",
     "text": "Problema: su coautor utiliza una versión diferente de R\n\n\nRix:\n\nUtiliza Rix, un administrador de paquetes enfocado en compilaciones reproducibles.\nCrea entornos específicos del proyecto con una versión personalizada de R, sus paquetes y todas las dependencias del sistema"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#diagrama-de-gantt-1",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#diagrama-de-gantt-1",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Diagrama de Gantt",
+    "text": "Diagrama de Gantt\n\npp &lt;- ganttrify(crono,\n          by_date = T,\n          size_text_relative = 1, \n          mark_quarters = TRUE,\n          exact_date = T,\n          colour_palette = c(\"orange2\",\"blue\", \"red\"),\n          month_number = F)"
   }
 ]
