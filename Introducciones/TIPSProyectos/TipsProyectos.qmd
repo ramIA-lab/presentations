@@ -27,10 +27,11 @@ editor: visual
 ```{=html}
 <!--
 ## Competencias transversales a evaluar en trabajos prácticos {background-color="#d8f1fc"}
--->
-```
 
 ------------------------------------------------------------------------
+
+-->
+```
 
 ## Competencias transversales a evaluar en trabajos prácticos
 
@@ -218,11 +219,9 @@ La única forma de comunicar con claridad es haciendo coincidir los mensajes ver
 
 ![](imagenes/resumen2.png){width="1000" height="600" fig-align="center"}
 
-------------------------------------------------------------------------
 
 # Buenas prácticas de trabajo
 
-------------------------------------------------------------------------
 
 # Proyectos y rutas de archivos
 
@@ -298,8 +297,6 @@ project folder
 ```
 :::
 :::::
-
-------------------------------------------------------------------------
 
 # Organizar un *Script*
 
@@ -453,7 +450,6 @@ Google pone a disposición de los desarrolladores un [código de buenas práctic
 ::::
 
 
--------------------------------------------------
 
 # Múltiples *scripts* y carpetas
 
@@ -625,7 +621,7 @@ project
 
 -------------------------------------------------
 
-## Problema: su coautor utiliza una versión de diferente de R
+## Problema: su coautor utiliza una versión diferente de R
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -642,13 +638,13 @@ project
 
 -------------------------------------------------
 
-## Problema: su coautor utiliza una versión de diferente de R
+## Problema: su coautor utiliza una versión diferente de R
 
 :::: {.columns}
 ::: {.column width="50%"}
-[**rix:**](https://github.com/ropensci/rix)
+[**Rix:**](https://github.com/ropensci/rix)
 
-- Utiliza Nix, un administrador de paquetes enfocado en compilaciones reproducibles. 
+- Utiliza Rix, un administrador de paquetes enfocado en compilaciones reproducibles. 
 
 - Crea entornos específicos del proyecto con una versión personalizada de R, sus paquetes y todas las dependencias del sistema
 :::

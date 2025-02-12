@@ -369,5 +369,19 @@
     "title": "Tips para el proyecto/trabajo práctico",
     "section": "Problema: Necesito compartir el código con mis compañeros",
     "text": "Problema: Necesito compartir el código con mis compañeros"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-su-coautor-utiliza-una-versión-diferente-de-r",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-su-coautor-utiliza-una-versión-diferente-de-r",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Problema: su coautor utiliza una versión diferente de R",
+    "text": "Problema: su coautor utiliza una versión diferente de R\n\n\nrig:\n\nAdministrar múltiples versiones de R\nCambiar entre diferentes versiones de R para diferentes proyectos"
+  },
+  {
+    "objectID": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-su-coautor-utiliza-una-versión-diferente-de-r-1",
+    "href": "Introducciones/TIPSProyectos/TipsProyectos.html#problema-su-coautor-utiliza-una-versión-diferente-de-r-1",
+    "title": "Tips para el proyecto/trabajo práctico",
+    "section": "Problema: su coautor utiliza una versión diferente de R",
+    "text": "Problema: su coautor utiliza una versión diferente de R\n\n\nRix:\n\nUtiliza Rix, un administrador de paquetes enfocado en compilaciones reproducibles.\nCrea entornos específicos del proyecto con una versión personalizada de R, sus paquetes y todas las dependencias del sistema"
   }
 ]
