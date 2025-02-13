@@ -49,7 +49,7 @@ editor: visual
 
 -   **Grup 1**
 
-    -   **Jemie Arjona** (jemie.arjona\@upc.edu)
+    -   **Jamie Arjona** (jamie.arjona\@upc.edu)
 
         -   IDEAI (Nexus II)
 
@@ -231,6 +231,10 @@ Les **matrícules d'honor** s'assignarán segons els criteri dels docents valora
 ::: fragment
 ### Entregables
 :::
+
+-   **Entregable 1** (no evaluable)
+
+-   **Entregable 2** (no evaluable)
 
 -   **Entregable 3**:
     -   Preprocessing
@@ -433,6 +437,7 @@ El software que utilitzarem és el següent:
 
 ------------------------------------------------------------------------
 
+```{=html}
 <!--
 ## Evaluació de les presentacions
 
@@ -461,4 +466,4 @@ Els companys del grup s'hauràn d'evaluar a si mateix i a la resta de companys i
 ------------------------------------------------------------------------
 
 -->
-
+```

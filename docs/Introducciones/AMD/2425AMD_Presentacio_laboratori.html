@@ -6,8 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.37">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.33">
 
   <meta name="author" content="">
   <title>Presentacions – Anàlisi Multivariant de dades (AMD)</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-191ddbbc25beeb27917483f50a4b59ba.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e0dae81e06e4f9e500a41fac832b16c0.css">
   <link rel="stylesheet" href="logo.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -160,7 +160,7 @@
 <ul>
 <li class="fragment"><p><strong>Grup 1</strong></p>
 <ul>
-<li class="fragment"><p><strong>Jemie Arjona</strong> (jemie.arjona@upc.edu)</p>
+<li class="fragment"><p><strong>Jamie Arjona</strong> (jamie.arjona@upc.edu)</p>
 <ul>
 <li class="fragment">IDEAI (Nexus II)</li>
 </ul></li>
@@ -359,7 +359,9 @@ Nota Final = 0.35 · Q + 0.325 · E_3 + 0.325 · E_4
 <h3 id="entregables">Entregables</h3>
 </div>
 <ul>
-<li class="fragment"><strong>Entregable 3</strong>:
+<li class="fragment"><p><strong>Entregable 1</strong> (no evaluable)</p></li>
+<li class="fragment"><p><strong>Entregable 2</strong> (no evaluable)</p></li>
+<li class="fragment"><p><strong>Entregable 3</strong>:</p>
 <ul>
 <li class="fragment">Preprocessing
 <ul>
@@ -369,7 +371,7 @@ Nota Final = 0.35 · Q + 0.325 · E_3 + 0.325 · E_4
 <li class="fragment">Clustering</li>
 <li class="fragment">Profiling</li>
 </ul></li>
-<li class="fragment"><strong>Entregable 4</strong>:
+<li class="fragment"><p><strong>Entregable 4</strong>:</p>
 <ul>
 <li class="fragment">Mètodes Factorials</li>
 <li class="fragment">Anàlisis Discriminant</li>
@@ -872,6 +874,8 @@ Els companys del grup s'hauràn d'evaluar a si mateix i a la resta de companys i
       });
       clipboard.on('success', onCopySuccess);
       if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
         const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
           text: getTextToCopy,
           container: window.document.getElementById('quarto-embedded-source-code-modal')
