@@ -51,7 +51,7 @@ editor: visual
 
     -   **Jamie Arjona** (jamie.arjona\@upc.edu)
 
-        -   IDEAI (Nexus II)
+        -   C5
 
 -   **Grup 2**
 
